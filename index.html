@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secret Match</title>
+  <meta name="theme-color" content="#0F0B14">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="screen-home" class="screen active">
+      <div class="hero">
+        <div class="logo">♡</div>
+        <h1>SECRET MATCH</h1>
+        <p>משחק התאמות זוגי. כל צד מסמן בנפרד. רק התאמות משותפות מוצגות.</p>
+      </div>
+
+      <div class="panel">
+        <button class="primary" id="startBtn">התחל משחק</button>
+        <button class="secondary" id="resetBtn">איפוס משחק</button>
+      </div>
+
+      <div class="notice">מיועד למבוגרים בלבד. מבוסס על הסכמה, פרטיות, גבולות ברורים, ואפשרות לעצור בכל רגע.</div>
+    </section>
+
+    <section id="screen-game" class="screen">
+      <header class="topbar">
+        <div>
+          <strong>Secret Match</strong>
+          <span id="progressText">0 / 0</span>
+        </div>
+        <button class="small-btn" id="backBtn">בית</button>
+      </header>
+
+      <div class="progress"><div id="progressFill"></div></div>
+      <div id="cardStage" class="card-stage"></div>
+    </section>
+
+    <section id="screen-results" class="screen">
+      <header class="topbar">
+        <div><strong>התאמות</strong><span id="matchSummary">0 התאמות</span></div>
+        <button class="small-btn" id="againBtn">שחק שוב</button>
+      </header>
+      <div id="resultsList" class="results-list"></div>
+    </section>
+
+    <nav class="bottom-nav">
+      <button data-screen="home" class="nav active">בית</button>
+      <button data-screen="game" class="nav">משחק</button>
+      <button data-screen="results" class="nav">התאמות</button>
+    </nav>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
