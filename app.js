@@ -1,17 +1,4 @@
-const cards=[
-{id:'bedroom',title:'חדר שינה',cat:'מקום',desc:'מקום פרטי, רגוע ונוח להתחלה.',icon:'חדר',tags:['בית','פרטיות']},
-{id:'living',title:'סלון',cat:'מקום',desc:'אווירה ביתית, קלילה וספונטנית.',icon:'סלון',tags:['בית','קליל']},
-{id:'kitchen',title:'מטבח',cat:'מקום',desc:'מקום ביתי עם משחקיות, אוכל ויין.',icon:'מטבח',tags:['בית','משחק']},
-{id:'hotel',title:'מלון',cat:'מקום',desc:'יציאה מהשגרה ואווירה של חופשה.',icon:'מלון',tags:['חופשה','יוקרתי']},
-{id:'spa',title:'ספא זוגי',cat:'מקום',desc:'חלוקים, מוזיקה שקטה, אור חם ורוגע.',icon:'ספא',tags:['פינוק','רגוע']},
-{id:'beach',title:'חוף ים',cat:'מקום',desc:'שקיעה, שמיכה, רוח ואווירה רומנטית.',icon:'חוף',tags:['חוץ','רומנטי']},
-{id:'romantic',title:'רומנטית',cat:'אווירה',desc:'שקט, מבטים ומוזיקה נעימה.',icon:'לב',tags:['עדין','זוגי']},
-{id:'luxury',title:'יוקרתית',cat:'אווירה',desc:'לבוש אלגנטי, תאורה חמה ותחושה פרימיום.',icon:'זהב',tags:['יוקרתי','אלגנטי']},
-{id:'playful',title:'קלילה',cat:'אווירה',desc:'פחות לחץ, יותר צחוק, משחק וזרימה.',icon:'חיוך',tags:['כיף','קליל']},
-{id:'cards',title:'קלפי זוגיות',cat:'אביזר',desc:'שאלות ומשימות קטנות לפתיחת שיחה.',icon:'קלפים',tags:['שיחה','משחק']},
-{id:'candles',title:'נרות',cat:'אביזר',desc:'תאורה חמה ואווירה רכה.',icon:'נרות',tags:['תאורה','רומנטי']},
-{id:'direct',title:'דיבור ברור',cat:'תקשורת',desc:'להגיד מה רוצים ומה לא, בלי לנחש.',icon:'ברור',tags:['גבולות','כנות']}
-];
+const cards=window.SECRET_MATCH_CARDS||[];
 let deck=[...cards],index=0,answers=JSON.parse(localStorage.getItem('secretMatchAnswers')||'{}'),history=[],sx=0,sy=0,dx=0,dy=0;
 const screens={home:document.getElementById('screen-home'),game:document.getElementById('screen-game'),results:document.getElementById('screen-results')};
 function shuffle(){deck=[...cards].sort(()=>Math.random()-.5);index=0;history=[];}
